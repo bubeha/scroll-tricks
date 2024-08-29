@@ -10,12 +10,10 @@ export function ScrollContainer({children, scrollTo}: Props) {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        console.log('rendered')
-
         if (ref.current) {
             scrollTo(ref.current);
         }
-    }, [ref.current]);
+    }, []);
 
     return (
         <div ref={ref} className="scroll-container">
